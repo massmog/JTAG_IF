@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+    <DashboardHolder activeDashboard="ILA">
+        <Dashboard columnResizable="1" key="ILA" rowResizable="0" title="ILA">
+            <Settings/>
+            <GadgetContainer boxAxis="1" count="2" height="752"
+                layout="JideBoxLayout" vgap="6" width="775">
+                <Gadget height="105" key="Trigger Capture Status" width="775"/>
+                <Gadget height="456" key="Basic Trigger Setup" width="775">
+                    <Probe name="design_1_i/processing_system7_0_M_AXI_GP0_AWADDR[31:0]"/>
+                    <Probe name="design_1_i/processing_system7_0_M_AXI_GP0_WDATA[31:0]"/>
+                    <Probe name="tck_OBUF"/>
+                    <Probe name="tdi_OBUF"/>
+                    <Probe name="tdo_IBUF"/>
+                    <Probe name="tms_OBUF"/>
+                </Gadget>
+                <Settings/>
+            </GadgetContainer>
+        </Dashboard>
+    </DashboardHolder>
+</component>

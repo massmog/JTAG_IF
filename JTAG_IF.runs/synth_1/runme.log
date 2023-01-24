@@ -1,0 +1,489 @@
+
+*** Running vivado
+    with args -log jtag_if.vds -m64 -mode batch -messageDb vivado.pb -source jtag_if.tcl
+
+
+****** Vivado v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source jtag_if.tcl
+# set_param gui.test TreeTableDev
+# set_param simulator.modelsimInstallPath C:/Program%20Files%20(x86)/ModelSim
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config  -id {Synth 8-3848}  -string {{WARNING: [Synth 8-3848] Net PJTAG_TDO in module/entity processing_system7_v5_5_processing_system7 does not have driver. [c:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/AXI_JTAG_TEST/AXI_JTAG_TEST.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/hdl/verilog/processing_system7_v5_5_processing_system7.v:298]}}  -suppress 
+# create_project -in_memory -part xc7z020clg484-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/JTAG_IF.cache/wt [current_project]
+# set_property parent.project_path C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/JTAG_IF.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# set_property board_part em.avnet.com:zed:part0:1.2 [current_project]
+# set_property ip_repo_paths C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/ip_repo [current_project]
+# read_vhdl -library xil_defaultlib {
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/deserializer.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/timer.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_in.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd
+#   C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd
+# }
+# read_xdc C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc
+# set_property used_in_implementation false [get_files C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc]
+# catch { write_hwdef -file jtag_if.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top jtag_if -part xc7z020clg484-1 -flatten_hierarchy none
+Command: synth_design -top jtag_if -part xc7z020clg484-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-1223] The version limit for your license is '2015.03' and will expire in -28 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 233.578 ; gain = 41.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'jtag_if' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:71]
+	Parameter N bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter TMS_TDI_OFF bound to: 1 - type: integer 
+	Parameter TDO_OFF bound to: 1 - type: integer 
+	Parameter N bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'if_out' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:35' bound to instance 'IFOUT' of component 'if_out' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'if_out__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:60]
+	Parameter N bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter N bound to: 32 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:25' bound to instance 'tms_fifo' of component 'fifo' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:42]
+	Parameter N bound to: 32 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized0' (1#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:42]
+	Parameter N bound to: 32 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:25' bound to instance 'tdi_fifo' of component 'fifo' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:97]
+	Parameter N bound to: 6 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:25' bound to instance 'datawidth_fifo' of component 'fifo' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized2' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:42]
+	Parameter N bound to: 6 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized2' (1#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'if_out__parameterized0' (2#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_out.vhd:60]
+	Parameter N bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'if_in' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_in.vhd:35' bound to instance 'IFIN' of component 'if_in' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'if_in__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_in.vhd:49]
+	Parameter N bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter N bound to: 32 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fifo' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/fifo.vhd:25' bound to instance 'tdo_fifo' of component 'fifo' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_in.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'if_in__parameterized0' (3#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/if_in.vhd:49]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'serializer' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd:35' bound to instance 'TMS_Serializer' of component 'serializer' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'serializer__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd:47]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'serializer__parameterized0' (4#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd:47]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'serializer' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd:35' bound to instance 'TDI_Serializer' of component 'serializer' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:210]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'deserializer' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/deserializer.vhd:35' bound to instance 'TDO_Deserializer' of component 'deserializer' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'deserializer__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/deserializer.vhd:48]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'deserializer__parameterized0' (5#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/deserializer.vhd:48]
+	Parameter tms_tdi_off bound to: 1 - type: integer 
+	Parameter tdo_off bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'timer' declared at 'C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/timer.vhd:34' bound to instance 'IFTIMER' of component 'timer' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'timer__parameterized0' [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/timer.vhd:46]
+	Parameter tms_tdi_off bound to: 1 - type: integer 
+	Parameter tdo_off bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'timer__parameterized0' (6#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/timer.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'jtag_if' (7#1) [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/jtag_if_top.vhd:71]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 268.582 ; gain = 76.957
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 268.582 ; gain = 76.957
+---------------------------------------------------------------------------------
+Loading clock regions from D:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/ClockBuffers.xml
+Loading clock placement rules from D:/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from D:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from D:/Xilinx/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/clg484/Package.xml
+Loading io standards from D:/Xilinx/Vivado/2014.3.1/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc]
+Finished Parsing XDC File [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/jtag_if_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/jtag_if_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 618.016 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for tck. (constraint file  C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc, line 101).
+Applied set_property MARK_DEBUG = true for tdi. (constraint file  C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc, line 102).
+Applied set_property MARK_DEBUG = true for tdo. (constraint file  C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc, line 103).
+Applied set_property MARK_DEBUG = true for tms. (constraint file  C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/synth/jtag_if.xdc, line 104).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/serializer.vhd:73]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/src/deserializer.vhd:96]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 8     
++---Registers : 
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---RAMs : 
+	              512 Bit         RAMs := 3     
+	               96 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 12    
+	   2 Input     32 Bit        Muxes := 13    
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 11    
+	   2 Input      4 Bit        Muxes := 84    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 64    
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module jtag_if 
+Detailed RTL Component Info : 
+Module fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              512 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 21    
+	   2 Input      1 Bit        Muxes := 9     
+Module fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	               96 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 21    
+	   2 Input      1 Bit        Muxes := 9     
+Module if_out__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module if_in__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module serializer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 6     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module deserializer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 17    
+Module timer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 618.016 ; gain = 426.391
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: 
++------------+------------+--------------------+----------------------+-----------------+-------------------------------------+
+|Module Name | RTL Object | Inference Criteria | Size (depth X width) | Primitives      | Hierarchical Name                   | 
++------------+------------+--------------------+----------------------+-----------------+-------------------------------------+
+|fifo        | Memory_reg | Implied            | 16 X 32              | RAM16X1D x 32   | jtag_if/if_out/Multiple/fifo/ram__2 | 
+|fifo        | Memory_reg | Implied            | 16 X 6               | RAM16X1D x 6    | jtag_if/if_out/fifo/ram__3          | 
++------------+------------+--------------------+----------------------+-----------------+-------------------------------------+
+
+Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 618.016 ; gain = 426.391
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:39 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:40 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin TMS_Serializer:reset to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TDI_Serializer:reset to constant 0
+WARNING: [Synth 8-3295] tying undriven pin TDO_Deserializer:reset to constant 0
+WARNING: [Synth 8-3295] tying undriven pin IFTIMER:reset to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:01:49 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:01:49 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     8|
+|3     |LUT1     |     7|
+|4     |LUT2     |    26|
+|5     |LUT3     |    42|
+|6     |LUT4     |   105|
+|7     |LUT5     |   199|
+|8     |LUT6     |   206|
+|9     |RAM16X1D |   102|
+|10    |FDCE     |    10|
+|11    |FDPE     |     2|
+|12    |FDRE     |   275|
+|13    |IBUF     |    86|
+|14    |OBUF     |    39|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------+------------------------------+------+
+|      |Instance           |Module                        |Cells |
++------+-------------------+------------------------------+------+
+|1     |top                |                              |  1108|
+|2     |  IFOUT            |if_out__parameterized0        |   392|
+|3     |    tms_fifo       |fifo__parameterized0__1       |   152|
+|4     |    tdi_fifo       |fifo__parameterized0__2       |   152|
+|5     |    datawidth_fifo |fifo__parameterized2          |    80|
+|6     |  IFIN             |if_in__parameterized0         |   153|
+|7     |    tdo_fifo       |fifo__parameterized0          |   151|
+|8     |  TMS_Serializer   |serializer__parameterized0__1 |    87|
+|9     |  TDI_Serializer   |serializer__parameterized0    |    87|
+|10    |  TDO_Deserializer |deserializer__parameterized0  |   202|
+|11    |  IFTIMER          |timer__parameterized0         |    60|
++------+-------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:50 . Memory (MB): peak = 618.016 ; gain = 426.391
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:01:25 . Memory (MB): peak = 618.016 ; gain = 76.957
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:01:50 . Memory (MB): peak = 618.016 ; gain = 426.391
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 102 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 102 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:01:50 . Memory (MB): peak = 618.016 ; gain = 426.391
+# write_checkpoint jtag_if.dcp
+# catch { report_utilization -file jtag_if_utilization_synth.rpt -pb jtag_if_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 618.016 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 23:14:18 2015...

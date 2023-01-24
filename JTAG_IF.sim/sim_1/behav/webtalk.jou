@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun Apr 26 12:17:37 2015
+# Process ID: 5624
+# Log file: C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/JTAG_IF.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/JTAG_IF.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Max/Documents/Elektrotechnik/dis-2014-2015/DIS_Seminar/Project/JTAG_IF/JTAG_IF.sim/sim_1/behav/xsim.dir/tb_top_behav/webtalk/xsim_webtalk.tcl -notrace

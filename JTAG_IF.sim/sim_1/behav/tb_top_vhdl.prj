@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../src/serializer.vhd"
+vhdl xil_defaultlib  "../../../src/deserializer.vhd"
+vhdl xil_defaultlib  "../../../src/timer.vhd"
+vhdl xil_defaultlib  "../../../src/if_in.vhd"
+vhdl xil_defaultlib  "../../../src/if_out.vhd"
+vhdl xil_defaultlib  "../../../src/fifo.vhd"
+vhdl xil_defaultlib  "../../../src/jtag_if_top.vhd"
+vhdl xil_defaultlib  "../../../sim/tb_serializer.vhd"
+vhdl xil_defaultlib  "../../../sim/tb_deserializer.vhd"
+vhdl xil_defaultlib  "../../../sim/tb_timer.vhd"
+vhdl xil_defaultlib  "../../../sim/tb_if_out.vhd"
+vhdl xil_defaultlib  "../../../sim/tb_top_out.vhd"
+
+# Do not sort compile order
+nosort
