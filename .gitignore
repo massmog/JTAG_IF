@@ -1,5 +1,4 @@
-/JTAG_IF.cache/*
-/JTAG_IF.hw/*
-/JTAG_IF.runs/*
-/JTAG_IF.runs/*
-/JTAG_IF.sim/*
+JTAG_IF.cache/
+JTAG_IF.hw/
+JTAG_IF.runs/
+JTAG_IF.sim/
